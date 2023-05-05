@@ -1,0 +1,5 @@
+package com.codewitheshan.blog.exceptions;
+
+public class GlobalExceptionHandler {
+
+}
