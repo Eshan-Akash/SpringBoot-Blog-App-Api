@@ -3,6 +3,7 @@ package com.codewitheshan.blog.services;
 import java.util.List;
 
 import com.codewitheshan.blog.payloads.PostDto;
+import com.codewitheshan.blog.payloads.PostResponse;
 
 public interface PostService {
 	//create 
@@ -15,7 +16,7 @@ public interface PostService {
 	void deletePost(Integer postId);
 		
 	//get all posts
-	List<PostDto> getAllPost();
+	PostResponse getAllPost(Integer pageNumber, Integer pageSize, String sortBy, String sortDir);
 		
 	//get single post
 	PostDto getPostById(Integer postId);
@@ -28,6 +29,8 @@ public interface PostService {
 		
 	//search posts
 	List<PostDto> searchPosts(String keyword);
+
+	
 }
 
 //PostResponse getAllPost(Integer pageNumber,Integer pageSize,String sortBy,String sortDir);
